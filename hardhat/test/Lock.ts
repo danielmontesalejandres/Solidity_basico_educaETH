@@ -11,11 +11,11 @@ describe("Lock", function () {
   // We use loadFixture to run this setup once, snapshot that state,
   // and reset Hardhat Network to that snapshot in every test.
   async function deployOneYearLockFixture() {
-    const ONE_YEAR_IN_SECS = 365 * 24 * 60 * 60;
+    const ONE_YEAR_IN_SECS = 365 * 24 * 60 * 60; // 1 year
     const ONE_GWEI = 1_000_000_000;
 
-    const lockedAmount = ONE_GWEI;
-    const unlockTime = (await time.latest()) + ONE_YEAR_IN_SECS;
+    const lockedAmount = ONE_GWEI; // 1Gwei
+    const unlockTime = (await time.latest()) + ONE_YEAR_IN_SECS; // 1 year from now
 
     // Contracts are deployed using the first signer/account by default
     const [owner, otherAccount] = await hre.ethers.getSigners();

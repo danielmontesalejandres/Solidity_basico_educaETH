@@ -46,7 +46,7 @@ const config: HardhatUserConfig = {
       url: "http://localhost:8545",
     },
     arbitrumSepolia: {
-      chainId: 421614,
+      chainId: 360,
       accounts: ACCOUNTS,
       url: ARBITRUM_SEPOLIA_RPC_URL,
     },
